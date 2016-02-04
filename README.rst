@@ -37,19 +37,21 @@ Getting started
 
      python setup.py install
 
-1. Plug the meter into the USB port and wait for it to enter charging
+2. (Optional) Install the udev rules file (for Linux distributions
+   using udev)::
+
+     sudo cp udev/50-contour.rules /etc/udev/rules.d/
+
+3. Plug the meter into the USB port and wait for it to enter charging
    mode.
 
-2. Run::
+4. Run::
 
      contourtool -o results.csv
 
-   Depending on your operating system, normal users might not be able
-   to access USB devices, so this might need to be run under sudo.
+5. When the tool exits, unplug the meter.
 
-3. When the tool exits, unplug the meter.
-
-4. Check the result.csv file against the results you see in the
+6. Check the result.csv file against the results you see in the
    logbook on the meter.
 
 
@@ -79,6 +81,13 @@ The output file is in CSV format, with the following columns:
 
 Known issues
 ------------
+
+Permissions problems
+````````````````````
+
+The example udev rules file ``udev/50-contour.rules`` makes the meter
+accessible to the ``plugdev`` group. Depending on your setup, this
+might need customisation.
 
 ``Expected to see '\x05'``
 ``````````````````````````

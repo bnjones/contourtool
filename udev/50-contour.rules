@@ -1,0 +1,2 @@
+# Contour Next USB
+ATTR{idVendor}=="1a79", ATTR{idProduct}=="7410", MODE="0664", GROUP="plugdev"
