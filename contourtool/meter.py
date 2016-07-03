@@ -135,8 +135,8 @@ class NextUSB(object):
 
     def expect(self, prefix):
         """
-        Expect a prefix (string) or one of several (tuple of strings).
-        Return which one was seen.
+        Read data from the device and check that it begins with the given
+        string. Return any following data.
         """
         self.debug("usb", "expect {!r}".format(prefix))
         data = self.read()
