@@ -19,8 +19,10 @@ software at your own risk. You have been warned!**
 Compatibility
 -------------
 
-Only the Contour Next USB meter is currently supported. Other meters
-(including earlier Contour meters) are not supported.
+Currently, only the Contour Next USB meter is supported, but with a
+bit of work it should be possible to support earlier Contour meters
+that use a serial interface. If you have one of these meters and you'd
+like to help, get in touch!
 
 
 Dependencies
